@@ -32,6 +32,7 @@ files:
 build_steps:
     - apt-get -y update
     - apt-get -y install cmake
+    - pip install -v --install-option="--no" --install-option="DLIB_USE_CUDA" dlib
     - pip install -r requirements.txt
     # The if_gpu and if_cpu directives can be used to run build steps
     # conditionally depending on the build environment.
